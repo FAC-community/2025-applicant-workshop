@@ -28,6 +28,11 @@ form.addEventListener('submit', (event) => {
     form.reset();
 });
 
+function myFunction() {
+    var element = document.documentElement;
+    element.classList.toggle("dark-mode");
+}
+
 /* IDEAS FOR ADDITIONAL INTERACTIONS
 
 1. Add functionality to highlight the navigation link of the current section as the user scrolls.
