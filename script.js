@@ -27,6 +27,10 @@ form.addEventListener('submit', (event) => {
     formResponse.textContent = `Thank you, ${name}, for your feedback: "${feedback}"`;
     form.reset();
 });
+function myFunction() {
+    var element = document.documentElement;
+    element.classList.toggle("dark-mode");
+}
 
 /* IDEAS FOR ADDITIONAL INTERACTIONS
 

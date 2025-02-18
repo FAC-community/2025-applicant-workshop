@@ -10,15 +10,15 @@
     --border-radius: 5px;
 }
 .dark-mode {
- primary-color: darkgreen;
- secondary-color: darkgrey;
- tertiary-color: black;
- hoverbackground-color: cream;
- boxshadow-color: white;
- button-hover-background-color: lightgreen;
- font-family: Arial, sans-serif;
- text-color: lightblue;
- border-radius: 5px;
+ --primary-color: darkgreen;
+ --secondary-color: darkgrey;
+ --tertiary-color: black;
+ --hoverbackground-color: cream;
+ --boxshadow-color: white;
+ --button-hover-background-color: lightgreen;
+ --font-family: Arial, sans-serif;
+ --text-color: lightblue;
+ --border-radius: 5px;
 }
 
 
