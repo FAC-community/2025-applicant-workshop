@@ -6,19 +6,19 @@
     --boxshadow-color: black;
     --button-hover-background-color: darkgreen;
     --font-family: Arial, sans-serif;
-    --text-color: #333;
+    --text-color: #1b7492;
     --border-radius: 5px;
 }
 
 .dark-mode {
-    --primary-color: darkgreen;
-    --secondary-color: darkgrey;
-    --tertiary-color: black;
-    --hoverbackground-color: cream;
+    --primary-color: rgb(18, 75, 18);
+    --secondary-color: black;
+    --tertiary-color: rgb(35, 35, 62);
+    --hoverbackground-color: navy;
     --boxshadow-color: white;
     --button-hover-background-color: lightgreen;
     --font-family: Arial, sans-serif;
-    --text-color: lightblue;
+    --text-color: white;
     --border-radius: 5px;
    }
 
