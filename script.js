@@ -22,23 +22,35 @@ colorButton.addEventListener('click', () => {
 const form = document.getElementById('feedback-form');
 const formResponse = document.getElementById('form-response');
 
-form.addEventListener("beforeinput", (event) => {
+// live character counter - using keyup provided correct count, tried keydown and beforeinput with inaccurate results
+// have written in a reset count to the 'submit' event listener function
 
-    const count = document.getElementById.apply("feedback").length;
-    document.getElementById("count").innerHTML = count;
+const count = document.getElementById("feedback").value.length;
+document.getElementById("count").innerHTML = count;
+//live character counter bit below, works with an 'event listener' which uses 'keyup' to update the live counter
+form.addEventListener("keyup", () => {
+    
+    const count = document.getElementById("feedback").value.length;
+    document.getElementById("count").innerHTML = count ;
+
 });
-
 
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const feedback = document.getElementById('feedback').value;
-
+    // resets the live counter to 0, below
+    document.getElementById("count").innerHTML = count;
 
     formResponse.textContent = `Thank you, ${name}, for your feedback: "${feedback}"`;
     form.reset();
+    
+
+    
 });
+
+
 
 /* IDEAS FOR ADDITIONAL INTERACTIONS
 
@@ -52,6 +64,7 @@ form.addEventListener('submit', (event) => {
 completed - used transition style in JS code
 
 7. Display a live character counter for the feedback textarea.
+completed - using keyup event listener
 
 8. Implement drag-and-drop functionality for rearranging items in a list.
 
