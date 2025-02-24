@@ -14,16 +14,28 @@ colorButton.addEventListener('click', () => {
     const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     colorBox.style.backgroundColor = randomColor;
+    colorBox.style.transition = "2s";
+
 });
 
 // Form submission handling
 const form = document.getElementById('feedback-form');
 const formResponse = document.getElementById('form-response');
 
+form.addEventListener("beforeinput", (event) => {
+
+    const count = document.getElementById.apply("feedback").length;
+    document.getElementById("count").innerHTML = count;
+});
+
+
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const feedback = document.getElementById('feedback').value;
+
+
     formResponse.textContent = `Thank you, ${name}, for your feedback: "${feedback}"`;
     form.reset();
 });
@@ -35,10 +47,18 @@ form.addEventListener('submit', (event) => {
 3. Create a dynamic list where users can add and remove items.
 4. Add validation to the feedback form to ensure name and feedback are not empty.
 5. Use localStorage to save the user's name for personalized greetings.
+
 6. Animate the color change of the box with a smooth transition.
+completed - used transition style in JS code
+
 7. Display a live character counter for the feedback textarea.
+
 8. Implement drag-and-drop functionality for rearranging items in a list.
+
 9. Add a countdown timer to a section, resetting after it reaches zero.
+
 10. Fetch and display data from a public API (e.g., random jokes or quotes).
 
 */
+
+
