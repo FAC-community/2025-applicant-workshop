@@ -11,12 +11,87 @@ const colorButton = document.getElementById('btn-change-color');
 const colorBox = document.getElementById('color-box');
 
 colorButton.addEventListener('click', () => {
-    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33'];
+    const colors = ['#FF5733', '#33FF57cp', '#33ffiF', '#F3FF33'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     colorBox.style.backgroundColor = randomColor;
     colorBox.style.transition = "2s";
 
 });
+
+// creating list elements to drag and drop for task 8
+// This below area assigns varibles to the elements we are going to create in the DOM
+// Assigns them ID and STYLES???
+// Should we be using setAttribute instead of individually setting characteristics? Set Attribute seems pointless
+
+
+const main = document.querySelector('main');
+
+const section4 = document.createElement('section');
+section4.id = 'Section 4';
+section4.className = 'content-section';
+// section4.innerText = 'Section 4';
+
+const h2 = document.createElement('h2');
+h2.id = 'h2';
+h2.innerText = 'Section 4 : The Drag Bit';
+h2.style.textShadow = '7 px 7 px 7 px Green';
+// h2.style.color = 'blue';
+
+const ul = document.createElement('ul');
+ul.id = 'Drag List';
+
+
+const dragBox = document.createElement('div');
+dragBox.className = 'dragBox';
+dragBox.style.width = '100%';
+dragBox.style.minHeight = '100vh';
+dragBox.style.background = '#0b0423';
+dragBox.style.display = 'flex';
+dragBox.style.alignItems = 'center';
+dragBox.style.justifyContent = 'center';
+
+const rightBox = document.createElement('div');
+rightBox.id = 'rightbox'
+rightBox.style.width = '300px';
+rightBox.style.minHeight = '400px';
+rightBox.style.margin = '20px';
+rightBox.style.border = '2px dashed #fff';
+
+const leftBox = document.createElement('div');
+leftBox.id = 'leftbox'
+leftBox.style.width = '300px';
+leftBox.style.minHeight = '400px';
+leftBox.style.margin = '20px';
+leftBox.style.border = '2px dashed #fff';
+
+const liA = document.createElement('li');
+liA.id = 'List Item A';
+liA.innerText = 'List Item A';
+liA.draggable = true;
+const liB = document.createElement('li');
+liB.id = 'List Item B';
+liB.innerText = 'List Item B';
+liB.draggable = true;
+const liC = document.createElement('li');
+liC.id = 'List Item C';
+liC.innerText = 'List Item C';
+liC.draggable = true;
+
+main.append(section4);
+section4.append(h2);
+section4.append(dragBox);
+dragBox.append(leftBox);
+dragBox.append(rightBox);
+section4.append(ul);
+ul.append(liA);
+ul.append(liB);
+ul.append(liC);
+
+
+
+
+
+
 
 // Form submission handling
 const form = document.getElementById('feedback-form');
