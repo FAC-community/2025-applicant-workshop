@@ -22,6 +22,7 @@ colorButton.addEventListener('click', () => {
 // This below area assigns varibles to the elements we are going to create in the DOM
 // Assigns them ID and STYLES???
 // Should we be using setAttribute instead of individually setting characteristics? Set Attribute seems pointless
+// is it possible to use PNGs or other IMGs with online Vscode?
 
 
 const main = document.querySelector('main');
@@ -39,6 +40,18 @@ h2.style.textShadow = '7 px 7 px 7 px Green';
 
 const ul = document.createElement('ul');
 ul.id = 'Drag List';
+ul.style.background = 'green';
+// ul.style.height ='60px';
+ul.style.margin ='30px';
+// ul.style.color =(255, 255, 255);
+ul.style.display = 'flex';
+ul.style.flexDirection = 'column';
+ul.style.alignItems = 'center';
+ul.style.cursor = 'grab';
+ul.style.listStyle = 'none';
+ul.style.padding = '10px';
+ul.style.borderRadius = '10px';
+ul.style.boxShadow = '10px 10px 1px pink';
 
 
 const dragBox = document.createElement('div');
@@ -47,6 +60,7 @@ dragBox.style.width = '100%';
 dragBox.style.minHeight = '100vh';
 dragBox.style.background = '#0b0423';
 dragBox.style.display = 'flex';
+// dragBox.style.flexDirection = 'column';
 dragBox.style.alignItems = 'center';
 dragBox.style.justifyContent = 'center';
 
@@ -64,6 +78,13 @@ leftBox.style.minHeight = '400px';
 leftBox.style.margin = '20px';
 leftBox.style.border = '2px dashed #fff';
 
+
+// make new list items into an array of 5 or so and loop through them using a standard counter and 
+// assign a number to each list item as it is created from the loop
+// use the 'getelement / append / (list[i]) within the loop
+const li = document.createElement('li');
+li.className = 'list item'
+
 const liA = document.createElement('li');
 liA.id = 'List Item A';
 liA.innerText = 'List Item A';
@@ -76,16 +97,24 @@ const liC = document.createElement('li');
 liC.id = 'List Item C';
 liC.innerText = 'List Item C';
 liC.draggable = true;
+const liD = document.createElement('li');
+liD.id = 'List Item D';
+liD.innerText = 'List Item D';
+liD.draggable = true;
 
 main.append(section4);
 section4.append(h2);
 section4.append(dragBox);
 dragBox.append(leftBox);
 dragBox.append(rightBox);
-section4.append(ul);
+leftBox.append(ul);
 ul.append(liA);
 ul.append(liB);
 ul.append(liC);
+ul.append(liD);
+ul.append(li);
+ul.append+(li);
+
 
 
 
