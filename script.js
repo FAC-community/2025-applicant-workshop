@@ -82,25 +82,45 @@ leftBox.style.border = '2px dashed #fff';
 // make new list items into an array of 5 or so and loop through them using a standard counter and 
 // assign a number to each list item as it is created from the loop
 // use the 'getelement / append / (list[i]) within the loop
-const li = document.createElement('li');
-li.className = 'list item'
+// list items need to exist prior to loop in an array, so they can be iterated???
+// no they do not apparently
 
-const liA = document.createElement('li');
-liA.id = 'List Item A';
-liA.innerText = 'List Item A';
-liA.draggable = true;
-const liB = document.createElement('li');
-liB.id = 'List Item B';
-liB.innerText = 'List Item B';
-liB.draggable = true;
-const liC = document.createElement('li');
-liC.id = 'List Item C';
-liC.innerText = 'List Item C';
-liC.draggable = true;
-const liD = document.createElement('li');
-liD.id = 'List Item D';
-liD.innerText = 'List Item D';
-liD.draggable = true;
+for ( i = 0; i < 5; i++) {
+    
+    const li = document.createElement('li');
+    ul.append(li);
+    li.id = 'List Item '+ [i+1];
+    li.innerText = 'List Item '+ [i+1];
+    li.draggable = true;
+    li.addEventListener('dragstart', function (e) {
+        let selected = e.target;
+        
+    }
+
+    )
+
+    // figure out how to add a magic carpet to the dragging bit
+    
+}
+
+
+// const liA = document.createElement('li');
+// liA.id = 'List Item A';
+// liA.innerText = 'List Item A';
+// liA.draggable = true;
+
+// const liB = document.createElement('li');
+// liB.id = 'List Item B';
+// liB.innerText = 'List Item B';
+// liB.draggable = true;
+// const liC = document.createElement('li');
+// liC.id = 'List Item C';
+// liC.innerText = 'List Item C';
+// liC.draggable = true;
+// const liD = document.createElement('li');
+// liD.id = 'List Item D';
+// liD.innerText = 'List Item D';
+// liD.draggable = true;
 
 main.append(section4);
 section4.append(h2);
@@ -108,12 +128,12 @@ section4.append(dragBox);
 dragBox.append(leftBox);
 dragBox.append(rightBox);
 leftBox.append(ul);
-ul.append(liA);
-ul.append(liB);
-ul.append(liC);
-ul.append(liD);
-ul.append(li);
-ul.append+(li);
+// ul.append(liA);
+// ul.append(liB);
+// ul.append(liC);
+// ul.append(liD);
+ //ul.append(li);
+
 
 
 
