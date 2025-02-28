@@ -92,9 +92,23 @@ for ( i = 0; i < 5; i++) {
     li.id = 'List Item '+ [i+1];
     li.innerText = 'List Item '+ [i+1];
     li.draggable = true;
-    li.addEventListener('dragstart', function (e) {
-        let selected = e.target;
-        
+    li.addEventListener('dragstart', (event) => {
+        let selected = event.target;
+
+        rightBox.addEventListener('dragover', (event) => {
+            event.preventDefault();
+        });
+        rightBox.addEventListener('drop', (event) => {
+            rightBox.appendChild(selected);
+            selected = null; 
+        })
+        leftBox.addEventListener('dragover', (event) => {
+            event.preventDefault();
+        });
+        leftBox.addEventListener('drop', (event) => {
+            leftBox.appendChild(selected);
+            selected = null; 
+        })
     }
 
     )
@@ -191,6 +205,15 @@ completed - used transition style in JS code
 completed - using keyup event listener
 
 8. Implement drag-and-drop functionality for rearranging items in a list.
+Completed - followed various different tutorials - 
+ - Became familiar with DOM manipulation through the scripot file (although unrealistic in practice)
+ - used a for loop to create a series of list items and assigned draggable function to these items
+ (currently the loop cues 5 instances, it could be looping from a pre 
+ initialised array variable above the loop. not sure if there is any need for this excercise.
+ planning on turning draggable list items into magic carpets.
+ need to give the rightbox a background to match leftbox
+
+
 
 9. Add a countdown timer to a section, resetting after it reaches zero.
 
