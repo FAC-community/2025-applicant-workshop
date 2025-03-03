@@ -30,20 +30,74 @@ const main = document.querySelector('main');
 const section4 = document.createElement('section');
 section4.id = 'Section 4';
 section4.className = 'content-section';
-// section4.innerText = 'Section 4';
 
-const h2 = document.createElement('h2');
-h2.id = 'h2';
-h2.innerText = 'Section 4 : The Drag Bit';
-h2.style.textShadow = '7 px 7 px 7 px Green';
-// h2.style.color = 'blue';
+const s4Title = document.createElement('h2');
+s4Title.id = 's4Title';
+s4Title.innerText = 'Section 4 : The Drag Bit';
+
+const section5 = document.createElement('section');
+section5.id = 'Section 5';
+section5.className = 'content-section';
+
+const s5Title = document.createElement('h2');
+s5Title.id = 's5Title';
+s5Title.innerText = 'Section 5 : Clicking some APIs';
+
+const APIBox = document.createElement('div');
+APIBox.id = 'APIBox';
+APIBox.style.background = 'purple';
+
+APIBox.style.margin ='30px';
+
+APIBox.style.display = 'flex';
+APIBox.style.flexDirection = 'column';
+APIBox.style.alignItems = 'center';
+APIBox.style.cursor = 'grab';
+APIBox.style.listStyle = 'none';
+APIBox.style.padding = '10px';
+APIBox.style.borderRadius = '10px';
+APIBox.style.boxShadow = '10px 10px 1px pink';
+
+const listed = ['API Button 1',
+                 'API Button 2',
+                 'API Button 3'];
+
+const links = ['https://keep.google.com/u/0/#home',
+                 'https://www.youtube.com/watch?v=o1A3tOtdRUY',
+                  'https://universal-creations.co.uk/contact/']
+
+for 
+
+
+
+( let i = 0; i < 3; i++) {
+
+    
+    
+    const clickbutton = document.createElement('button');
+    clickbutton.id = listed[i];
+    console.log(clickbutton.id);
+    clickbutton.innerText = listed[i];
+
+    clickbutton.addEventListener('click', ()=>{
+        window.open(links[i]);
+    });
+    
+
+    APIBox.append(clickbutton);
+    
+}
+
+
+
+
 
 const ul = document.createElement('ul');
 ul.id = 'Drag List';
-ul.style.background = 'green';
-// ul.style.height ='60px';
+ul.style.background = 'purple';
+
 ul.style.margin ='30px';
-// ul.style.color =(255, 255, 255);
+
 ul.style.display = 'flex';
 ul.style.flexDirection = 'column';
 ul.style.alignItems = 'center';
@@ -77,7 +131,7 @@ leftBox.style.width = '300px';
 leftBox.style.minHeight = '400px';
 leftBox.style.margin = '20px';
 leftBox.style.border = '2px dashed #fff';
-
+// leftBox.addEventListener('click', function);
 
 // make new list items into an array of 5 or so and loop through them using a standard counter and 
 // assign a number to each list item as it is created from the loop
@@ -118,39 +172,21 @@ for ( i = 0; i < 5; i++) {
 }
 
 
-// const liA = document.createElement('li');
-// liA.id = 'List Item A';
-// liA.innerText = 'List Item A';
-// liA.draggable = true;
-
-// const liB = document.createElement('li');
-// liB.id = 'List Item B';
-// liB.innerText = 'List Item B';
-// liB.draggable = true;
-// const liC = document.createElement('li');
-// liC.id = 'List Item C';
-// liC.innerText = 'List Item C';
-// liC.draggable = true;
-// const liD = document.createElement('li');
-// liD.id = 'List Item D';
-// liD.innerText = 'List Item D';
-// liD.draggable = true;
-
 main.append(section4);
-section4.append(h2);
+section4.append(s4Title);
 section4.append(dragBox);
 dragBox.append(leftBox);
 dragBox.append(rightBox);
 leftBox.append(ul);
-// ul.append(liA);
-// ul.append(liB);
-// ul.append(liC);
-// ul.append(liD);
- //ul.append(li);
+main.append(section5);
+section5.append(s5Title);
+section5.append(APIBox);
 
 
-
-
+// working with event listeners
+// make new section 5
+// buttons within s5 will open different APIs
+// event listeners on the buttons
 
 
 
@@ -219,6 +255,8 @@ Completed - followed various different tutorials -
 
 10. Fetch and display data from a public API (e.g., random jokes or quotes).
 
+will add event listener buttons for different apis
+event listener for phone gyroscope / accelorometer
 */
 
 

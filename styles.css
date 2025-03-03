@@ -17,6 +17,8 @@ li {
     box-shadow: 5px 5px 1px white;
 }
 
+
+
 body {
     margin: 0;
     font-family: var(--font-family);
@@ -62,17 +64,23 @@ nav a:hover {
 }
 
 button {
-    background-color: var(--primary-color);
+    
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    cursor: pointer;
+       cursor: pointer;
     transition: background-color 0.3s;
+    color:rgb(247, 243, 243);
+    background-color:rgb(212, 134, 248);
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 7px;
+    box-shadow: 5px 5px 1px white;
 }
 
 button:hover {
-    background-color: darkgreen;
+    background-color: rgb(252, 0, 239);
 }
 
 .hidden-info {
