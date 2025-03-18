@@ -6,6 +6,6 @@ An introduction to modern CSS &amp; exploratory JS
 
 - Satyam
 - Durul
+- neha
+- henny
 
-Change
-Hello
