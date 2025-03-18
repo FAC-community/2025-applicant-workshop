@@ -35,7 +35,7 @@ const randomNumberButton = document.getElementById('btn-random-num')
 const numberBox = document.getElementById('number-box')
 
 randomNumberButton.addEventListener('click', () => {
-  const randomNum = Math.random()
+  const randomNum = Math.floor(Math.random() * 100);
   numberBox.textContent = randomNum;
 
 });
