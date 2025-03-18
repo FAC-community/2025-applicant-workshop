@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Web Project</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Web Project</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
     <header>
         <h1>Welcome to the Interactive Web Project</h1>
         <nav>
-            <ul>
-                <li><a href="#section1" id="link-section1">Section 1</a></li>
-                <li><a href="#section2" id="link-section2">Section 2</a></li>
-                <li><a href="#section3" id="link-section3">Section 3</a></li>
-            </ul>
+        <ul>
+            <li><a href="#section1" id="link-section1">Section 1</a></li>
+            <li><a href="#section2" id="link-section2">Section 2</a></li>
+            <li><a href="#section3" id="link-section3">Section 3</a></li>
+            <li><a href="#data-section" id="link-data-section">Data Section</a></li>
+        </ul>
         </nav>
     </header>
 
@@ -46,12 +47,20 @@
             </form>
             <div id="form-response"></div>
         </section>
+
+        <!-- New section for rendered data from data.js -->
+        <section id="data-section" class="content-section">
+            <h2>Section 4: Data Section</h2>
+            <div id="data-container"></div>
+        </section>
     </main>
 
     <footer>
         <p>Project created for JavaScript and DOM manipulation practice.</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Use type="module" to support ES module imports -->
+    <script type="module" src="./script.js"></script>
+    
+    </body>
 </html>

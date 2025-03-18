@@ -1,3 +1,5 @@
+// import...
+
 // Toggle hidden information
 const toggleButton = document.getElementById('btn-toggle1');
 const hiddenInfo = document.querySelector('.hidden-info');
@@ -28,6 +30,18 @@ form.addEventListener('submit', (event) => {
     form.reset();
 });
 
+// Function to render the items on data-container
+function renderItems(items) {
+    const container = document.getElementById('data-container');
+    container.innerHTML = ''; // Clear previous content
+  
+    items.forEach(item => {
+      const div = document.createElement('div');
+      div.innerHTML = `<p>${item}</p>`;
+      container.appendChild(div);
+    });
+  }
+
 /* IDEAS FOR ADDITIONAL INTERACTIONS
 
 1. Add functionality to highlight the navigation link of the current section as the user scrolls.
@@ -42,3 +56,6 @@ form.addEventListener('submit', (event) => {
 10. Fetch and display data from a public API (e.g., random jokes or quotes).
 
 */
+
+// Call the render function on page load or when needed
+renderItems(dataItems);
