@@ -1,106 +1,58 @@
+/* Define CSS variables */
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #f4f4f4;
-    --font-family: Arial, sans-serif;
+    --bg-color: #f4f4f4;
     --text-color: #333;
-    --border-radius: 5px;
-}
-
-body {
-    margin: 0;
-    font-family: var(--font-family);
-    background-color: var(--secondary-color);
+    --input-bg: #fff;
+    --button-bg: #007bff;
+    --button-text: white;
+  }
+  
+  /* Apply CSS variables */
+  body {
+    background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
-}
-
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.content-section {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 800px;
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: darkgreen;
-}
-
-.hidden-info {
-    display: none;
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: var(--secondary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: var(--border-radius);
-}
-
-#color-box {
-    width: 100%;
-    height: 100px;
-    background-color: lightgray;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    border-radius: var(--border-radius);
-}
-
-form {
-    display: flex;
+    height: 100vh;
     flex-direction: column;
-    gap: 0.5rem;
-}
-
-input, textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: var(--border-radius);
+  }
+  
+  .form-container {
+    background: var(--input-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input {
     width: 100%;
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: darkblue;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode {
+    --bg-color: #222;
+    --text-color: white;
+    --input-bg: #333;
+    --button-bg: #ff9800;
+    --button-text: black;
+  }

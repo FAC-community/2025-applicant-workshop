@@ -1,0 +1,58 @@
+/* Define CSS variables */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --input-bg: #fff;
+  --button-bg: #007bff;
+  --button-text: white;
+}
+
+/* Apply CSS variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.form-container {
+  background: var(--input-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --bg-color: #222;
+  --text-color: white;
+  --input-bg: #333;
+  --button-bg: #ff9800;
+  --button-text: black;
+}
