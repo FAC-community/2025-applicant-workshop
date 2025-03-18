@@ -42,6 +42,25 @@ function renderItems(items) {
     });
   }
 
+  // Creating a new paragraph element
+const newParagraph = document.createElement('p');
+newParagraph.setAttribute('id','testId');
+// Setting the text content of the new paragraph
+newParagraph.textContent = 'I hate GitHub.';
+
+// Appending the new paragraph to the body of the document
+document.body.appendChild(newParagraph)
+
+
+
+const hideButton = document.getElementById('hide-btn')
+
+hideButton.addEventListener('click', function hideSection2(){
+  const section2 = document.getElementById('section2');
+  section2.style.display = 'none';
+ }
+);
+
 /* IDEAS FOR ADDITIONAL INTERACTIONS
 
 1. Add functionality to highlight the navigation link of the current section as the user scrolls.
@@ -59,3 +78,4 @@ function renderItems(items) {
 
 // Call the render function on page load or when needed
 renderItems(dataItems);
+;

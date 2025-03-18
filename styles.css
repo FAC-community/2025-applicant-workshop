@@ -1,6 +1,6 @@
 :root {
     --primary-color: #4CAF50;
-    --secondary-color: #f4f4f4;
+    --secondary-color: hsl(308, 79%, 66%);
     --font-family: Arial, sans-serif;
     --text-color: #333;
     --border-radius: 5px;
@@ -48,6 +48,10 @@ nav a:hover {
     background-color: white;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#testId {
+    color: var(--primary-color);
 }
 
 button {
