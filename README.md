@@ -5,3 +5,4 @@ An introduction to modern CSS &amp; exploratory JS
 
 - neha
 - henny
+- foundation
