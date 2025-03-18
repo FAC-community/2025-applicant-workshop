@@ -74,7 +74,7 @@ button:hover {
 }
 
 #color-box {
-    width: 100%;
+    width: 50%;
     height: 100px;
     background-color: lightgray;
     display: flex;
@@ -108,12 +108,13 @@ footer {
 #number-box {
     border: 2px dashed #4CAF50; /* Dashed border */
     padding: 0.5rem 1rem; /* Padding inside the box */
-    border-radius: 2px; /* Optional: Rounded corners */
+    border-radius: px; /* Optional: Rounded corners */
     background-color: #f4f4f4; /* Optional: Background color */
     text-align: center; /* Optional: Center text */
     font-family: 'Poppins', sans-serif; /* Optional: Font family */
     font-size: 1rem; /* Optional: Font size */
     color: #333; /* Optional: Text color */
+    width: 29%;
 }
 
 
