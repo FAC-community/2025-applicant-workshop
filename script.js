@@ -54,10 +54,17 @@ document.body.appendChild(newParagraph)
 
 
 const hideButton = document.getElementById('hide-btn')
+const showButton = document.getElementById('show-btn')
 
 hideButton.addEventListener('click', function hideSection2(){
   const section2 = document.getElementById('section2');
   section2.style.display = 'none';
+ }
+);
+
+showButton.addEventListener('click', function showSection2(){
+  const section2 = document.getElementById('section2');
+  section2.style.display = '';
  }
 );
 
